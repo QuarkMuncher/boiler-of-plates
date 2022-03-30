@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "prepare": "husky install"
   },
   "dependencies": {
     "react": "^17.0.2",
@@ -16,6 +17,8 @@
     "cz-conventional-changelog": "3.3.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.29.4",
+    "husky": ">=7",
+    "lint-staged": ">=10",
     "prettier": "^2.6.1",
     "vite": "^2.8.0",
     "vite-plugin-imagemin": "^0.6.1"
@@ -24,5 +27,8 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,css,md}": "prettier --write"
   }
 }
